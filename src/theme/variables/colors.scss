@@ -1,0 +1,41 @@
+:root {
+  --darken-percentage: 15%;
+  --white-color: hsl(234, 24%, 100%);
+  --black-color: hsl(234, 24%, 25%);
+
+  --primary-color: hsl(220, 56%, 48%);
+  --dim-primary-color: hsl(220, 56%, calc(48% - var(--darken-percentage)));
+  --light-primary-color: hsl(220, 56%, calc(48% + var(--darken-percentage)));
+
+  --complementary-color: hsl(40, 56%, 48%);
+  --dim-complementary-color: hsl(40, 56%, calc(48% - var(--darken-percentage)));
+  --light-complementary-color: hsl(
+    40,
+    56%,
+    calc(48% + var(--darken-percentage))
+  );
+
+  --background-color: hsl(234, 24%, 100%);
+  --dim-background-color: hsl(234, 24%, calc(100% - var(--darken-percentage)));
+
+  --middleground-color: hsl(234, 24%, 50%);
+  --dim-middleground-color: hsl(234, 24%, calc(50% - var(--darken-percentage)));
+  --light-middleground-color: hsl(
+    234,
+    24%,
+    calc(50% + var(--darken-percentage))
+  );
+
+  --foreground-color: hsl(234, 24%, 25%);
+  --dim-foreground-color: hsl(0, 0%, calc(100% - var(--darken-percentage)));
+
+  // --success-color: hsl(137, 100%, 65%);
+  --success-color: hsl(127, 100%, 65%);
+  --dim-success-color: hsl(147, 100%, calc(65% - var(--darken-percentage)));
+
+  --warning-color: hsl(37, 100%, 65%);
+  --dim-warning-color: hsl(37, 100%, calc(65% - var(--darken-percentage)));
+
+  --danger-color: hsl(7, 100%, 65%);
+  --dim-danger-color: hsl(7, 100%, calc(65% - var(--darken-percentage)));
+}

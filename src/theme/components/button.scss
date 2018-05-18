@@ -1,0 +1,24 @@
+.ant-btn {
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    background-color: var(--white-color-translucent);
+    color: var(--white-color);
+    border-color: var(--white-color);
+  }
+}
+
+.ant-btn-primary {
+  color: var(--background-color);
+  border-color: var(--background-color);
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--background-color);
+    border-color: var(--background-color);
+  }
+}

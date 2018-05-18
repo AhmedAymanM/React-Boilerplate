@@ -1,0 +1,8 @@
+.ant-layout {
+  &-sider-trigger {
+    background: var(--background-color);
+    &:hover {
+      background: var(--background-color-light);
+    }
+  }
+}

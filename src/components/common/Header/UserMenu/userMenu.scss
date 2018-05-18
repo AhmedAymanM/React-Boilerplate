@@ -1,0 +1,15 @@
+.user-menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--padding);
+  cursor: pointer;
+  &:hover {
+    background: var(--background-color-light);
+  }
+  &__avatar {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    border: 3px solid var(--white-color-translucent);
+  }
+}

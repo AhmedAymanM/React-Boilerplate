@@ -1,0 +1,32 @@
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+
+  &__title {
+    font-weight: bolder;
+    font-size: 1.8em;
+    margin: 0;
+    margin-right: 4px;
+  }
+
+  &__button {
+    margin-left: 4px;
+    @media (max-width: 599px) {
+      margin-right: 4px;
+      margin-left: auto;
+    }
+  }
+  &__filter-action {
+    margin-left: 4px;
+    width: 200px;
+    @media (max-width: 599px) {
+      order: 3;
+      margin-right: 4px;
+      margin-left: auto;
+      padding: 8px 0;
+    }
+  }
+}

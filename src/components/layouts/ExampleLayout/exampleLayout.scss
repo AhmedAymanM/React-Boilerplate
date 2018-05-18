@@ -1,0 +1,24 @@
+.example-layout {
+  font-family: sans-serif;
+  min-height: 100vh;
+  &__content {
+    background: var(--white-color);
+  }
+
+  &__grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px 8px;
+    > * {
+      margin: 8px;
+      width: calc(100% - 8px);
+      @media (min-width: 768px) and (max-width: 1200px) {
+        width: calc(50% - (8px * 2));
+      }
+
+      @media (min-width: 1201px) {
+        width: calc(33.3% - (8px * 3));
+      }
+    }
+  }
+}

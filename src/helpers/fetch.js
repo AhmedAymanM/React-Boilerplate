@@ -1,12 +1,13 @@
-import fetch from 'unfetch';
+import fetch from "unfetch";
 
-const userToken = '';
-const API_URL = 'www.apidomain.com';
+// set your default token and api_url
+const userToken = "";
+const API_URL = "www.apidomain.com";
 
 function headers(token) {
   return {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
+    Accept: "application/json",
+    "Content-Type": "application/json",
     authorize: token
   };
 }
@@ -23,14 +24,14 @@ function parseResponse(response) {
 function queryString(params) {
   const query = Object.keys(params)
     .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`)
-    .join('&');
-  return `${query.length ? '?' : ''}${query}`;
+    .join("&");
+  return `${query.length ? "?" : ""}${query}`;
 }
 
 export default {
   get(url, params = {}) {
     return fetch(`${API_URL}${url}${queryString(params)}`, {
-      method: 'GET',
+      method: "GET",
       headers: headers(userToken)
     }).then(parseResponse);
   },
@@ -39,7 +40,7 @@ export default {
     const body = JSON.stringify(data);
 
     return fetch(`${API_URL}${url}`, {
-      method: 'POST',
+      method: "POST",
       headers: headers(userToken),
       body
     }).then(parseResponse);
@@ -49,7 +50,7 @@ export default {
     const body = JSON.stringify(data);
 
     return fetch(`${API_URL}${url}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: headers(userToken),
       body
     }).then(parseResponse);
@@ -57,7 +58,7 @@ export default {
 
   delete(url) {
     return fetch(`${API_URL}${url}`, {
-      method: 'DELETE',
+      method: "DELETE",
       headers: headers(userToken)
     }).then(parseResponse);
   }

@@ -36,9 +36,6 @@
   background-color: var(--background-color);
 }
 
-.ant-menu-item:hover {
-  color: var(--middleground-color);
-}
 .ant-select-dropdown-menu-item:hover,
 .ant-select-dropdown-menu-item-selected,
 .ant-select-dropdown-menu-item-active,
@@ -53,7 +50,38 @@
   font-weight: 600;
 }
 
-.ant-menu-item:first-child {
+.ant-menu-horizontal .ant-menu {
+  color: var(--white-color);
+  background: var(--primary-color);
+}
+
+.ant-menu-horizontal > .ant-menu-item,
+.ant-menu-horizontal > .ant-menu-item > a {
+  color: white;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+  border-bottom: 2px solid var(--complementary-color);
+  color: var(--complementary-color);
+}
+
+.ant-menu-horizontal > .ant-menu-item > a:hover {
+  color: var(--complementary-color);
+}
+
+.ant-menu-item:hover {
+  color: var(--middleground-color);
+  color: var(--complementary-color);
+}
+
+.ant-menu-vertical .ant-menu-item:first-child {
   margin-top: 16px;
 }
 

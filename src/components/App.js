@@ -1,6 +1,6 @@
-import React from "react";
-import { hot } from "react-hot-loader";
-import ExampleLayout from "./layouts/ExampleLayout/ExampleLayout";
+import React from 'react';
+import { hot } from 'react-hot-loader';
+import ExampleLayout from './layouts/ExampleLayout/ExampleLayout';
 
 const App = () => <ExampleLayout />;
 

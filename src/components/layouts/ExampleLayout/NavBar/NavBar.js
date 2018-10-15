@@ -1,12 +1,12 @@
-import React from "react";
-import { Button, Select, Icon } from "antd";
-import "./navBar.scss";
+import React from 'react';
+import { Button, Select, Icon } from 'antd';
+import './navBar.scss';
 
 const { Option, OptGroup } = Select;
 
 const SelectPlaceholder = () => (
   <div>
-    <Icon type="filter" style={{ padding: "2px" }} />
+    <Icon type="filter" style={{ padding: '2px' }} />
     <span> Choose Semester</span>
   </div>
 );

@@ -1,6 +1,6 @@
-import React from "react";
-import UserMenu from "./UserMenu/UserMenu";
-import "./header.scss";
+import React from 'react';
+import UserMenu from './UserMenu/UserMenu';
+import './header.scss';
 
 const Header = () => (
   <div className="header">

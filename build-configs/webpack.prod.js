@@ -1,22 +1,22 @@
-const commonPaths = require("./common-paths");
-const UglifyJsWebpackPlugin = require("uglifyjs-webpack-plugin");
-const CompressionWebpackPlugin = require("compression-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const commonPaths = require('./common-paths');
+const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const config = {
-  mode: "production",
+  mode: 'production',
   entry: {
     main: commonPaths.entryPath
   },
   output: {
-    filename: "[name].[chunkhash:8].js"
+    filename: '[name].[chunkhash:8].js'
   },
   stats: {
     children: false
   },
   optimization: {
-    nodeEnv: "production",
+    nodeEnv: 'production',
     minimizer: [
       new UglifyJsWebpackPlugin({
         cache: true,
@@ -28,9 +28,9 @@ const config = {
     splitChunks: {
       cacheGroups: {
         styles: {
-          name: "styles",
+          name: 'styles',
           test: /\.css$/,
-          chunks: "all",
+          chunks: 'all',
           enforce: true
         }
       }

@@ -1,6 +1,6 @@
-import React from "react";
-import { Avatar, Dropdown, Menu, Icon } from "antd";
-import "./userMenu.scss";
+import React from 'react';
+import { Avatar, Dropdown, Menu, Icon } from 'antd';
+import './userMenu.scss';
 
 const menu = (
   <Menu>

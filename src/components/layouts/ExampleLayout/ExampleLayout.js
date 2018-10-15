@@ -1,11 +1,11 @@
-import React from "react";
-import { Layout } from "antd";
+import React from 'react';
+import { Layout } from 'antd';
 // import Hello from "../Hello";
-import NavBar from "./NavBar/NavBar";
-import ExampleContent from "../../features/example/ExampleContent";
-import SideNav from "../../common/SideNav/SideNav";
-import Header from "../../common/Header/Header";
-import "./exampleLayout.scss";
+import NavBar from './NavBar/NavBar';
+import ExampleContent from '../../features/example/ExampleContent';
+import SideNav from '../../common/SideNav/SideNav';
+import Header from '../../common/Header/Header';
+import './exampleLayout.scss';
 
 const { Sider } = Layout;
 

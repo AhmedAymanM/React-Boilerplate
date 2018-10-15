@@ -1,15 +1,16 @@
-import React from "react";
-import { Menu, Icon } from "antd";
-import "./sideNav.scss";
+import React from 'react';
+import { Menu, Icon } from 'antd';
+import './sideNav.scss';
 
 const MenuItem = Menu.Item;
 
 const SideNav = () => (
   <Menu
     className="side-nav"
-    defaultSelectedKeys={["1"]}
+    defaultSelectedKeys={['1']}
     mode="inline"
-    inlineIndent="20">
+    inlineIndent="20"
+  >
     <MenuItem key="1">
       <Icon type="home" />
       <span>Dashboard</span>

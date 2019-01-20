@@ -1,8 +1,8 @@
 {
   "presets": [
-    "react",
+    "@babel/preset-react",
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           "browsers": "last 2 versions"
@@ -21,19 +21,19 @@
       }
     ],
     "lodash",
-    "transform-runtime",
+    "@babel/plugin-transform-runtime",
     "react-hot-loader/babel",
-    "syntax-dynamic-import",
+    "@babel/plugin-syntax-dynamic-import",
     "dynamic-import-webpack",
-    "transform-object-rest-spread",
-    "transform-class-properties"
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties"
   ],
   "env": {
     "test": {
       "presets": [
-        "react",
+        "@babel/preset-react",
         [
-          "env",
+          "@babel/preset-env",
           {
             "targets": {
               "browsers": "last 2 versions"
@@ -45,9 +45,9 @@
         ]
       ],
       "plugins": [
-        "transform-es2015-modules-commonjs",
-        "transform-object-rest-spread",
-        "transform-class-properties"
+        "@babel/plugin-transform-modules-commonjs",
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-proposal-class-properties"
       ]
     }
   }

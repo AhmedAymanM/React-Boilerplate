@@ -1,5 +1,5 @@
-const commonPaths = require('./common-paths');
 const webpack = require('webpack');
+const commonPaths = require('./common-paths');
 
 const config = {
   mode: 'development',

@@ -1,8 +1,8 @@
-const commonPaths = require('./common-paths');
-const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const commonPaths = require('./common-paths');
 
 const config = {
   mode: 'production',
@@ -10,7 +10,8 @@ const config = {
     main: commonPaths.entryPath
   },
   output: {
-    filename: '[name].[chunkhash:8].js'
+    filename: '[name].[chunkhash:8].js',
+    chunkFilename: '[name].[chunkhash:8].js'
   },
   stats: {
     children: false
@@ -18,10 +19,11 @@ const config = {
   optimization: {
     nodeEnv: 'production',
     minimizer: [
-      new UglifyJsWebpackPlugin({
+      new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true
+        sourceMap: true,
+        extractComments: true
       }),
       new OptimizeCSSAssetsPlugin({})
     ],

@@ -1,6 +1,6 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const commonPaths = require('./common-paths');
 
@@ -40,7 +40,7 @@ const config = {
   },
   plugins: [
     new CleanWebpackPlugin([commonPaths.outputPath], {
-      allowExternal: true
+      dangerouslyAllowCleanPatternsOutsideProject: true
     }),
     new CompressionWebpackPlugin()
   ]

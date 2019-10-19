@@ -107,15 +107,7 @@ const config = {
               ident: 'postcss',
               plugins: () => [
                 postcssFlexbugsFixes,
-                autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'ie >= 10'
-                  ],
-                  flexbox: 'no-2009'
-                })
+                autoprefixer({})
               ]
             }
           },

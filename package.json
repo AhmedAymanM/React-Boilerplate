@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "precommit": "lint-staged",
     "build": " cross-env NODE_ENV=production webpack -p --env.env=prod",
     "build:watch": "yarn build --watch",
     "dev": "cross-env webpack-dev-server --env.env=dev",
